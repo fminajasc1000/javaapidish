@@ -4,7 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+/*
+ * Clase para definicion de la tabla persona, asi como de sus atributos
+ * @Version 1.0 08/05/2021
+ * @author Francisco Minajas
+ * 
+ * */
 @Entity
 public class Persona {
 	@Id
@@ -13,13 +18,15 @@ public class Persona {
 	@Column
 	private String nombre;
 	@Column
-	private String apPaterno;
+	private String apellidop;
 	@Column
-	private String apMaterno;
+	private String apellidom;
 	@Column
 	private Integer tipo;
-	
-	//getters and setters
+	@Column
+	private String username;
+	@Column
+	private String password;
 	public Integer getIdPersona() {
 		return idPersona;
 	}
@@ -32,23 +39,35 @@ public class Persona {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getApPaterno() {
-		return apPaterno;
+	public String getApellidop() {
+		return apellidop;
 	}
-	public void setApPaterno(String apPaterno) {
-		this.apPaterno = apPaterno;
+	public void setApellidop(String apellidop) {
+		this.apellidop = apellidop;
 	}
-	public String getApMaterno() {
-		return apMaterno;
+	public String getApellidom() {
+		return apellidom;
 	}
-	public void setApMaterno(String apMaterno) {
-		this.apMaterno = apMaterno;
+	public void setApellidom(String apellidom) {
+		this.apellidom = apellidom;
 	}
 	public Integer getTipo() {
 		return tipo;
 	}
 	public void setTipo(Integer tipo) {
 		this.tipo = tipo;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

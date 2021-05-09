@@ -7,6 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/*
+ * Clase para definir la estructura de la tabla proyecto con hibernet
+ * @Version 1.0 08/05/2021
+ * @author Francisco Minajas
+ * 
+ * */
+
 @Entity
 public class Proyecto {
 	@Id
