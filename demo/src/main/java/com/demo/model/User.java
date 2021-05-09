@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class User {
 	@Id
 	@GeneratedValue
-	private Integer idPersona;
+	private Integer id;
 	@Column
 	private String nombre;
 	@Column
@@ -24,11 +24,11 @@ public class User {
 	@Column
 	private Integer tipo;
 	//getters and setters
-	public Integer getIdPersona() {
-		return idPersona;
+	public Integer getId() {
+		return id;
 	}
-	public void setIdPersona(Integer idPersona) {
-		this.idPersona = idPersona;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;
