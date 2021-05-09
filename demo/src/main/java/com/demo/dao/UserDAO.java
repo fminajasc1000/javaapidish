@@ -2,7 +2,7 @@ package com.demo.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.demo.model.Persona;
+import com.demo.model.User;
 
 /*
  * Clase JPA
@@ -10,6 +10,6 @@ import com.demo.model.Persona;
  * @author Francisco Minajas
  * 
  * */
-public interface PersonaDAO extends JpaRepository<Persona,Integer> {
+public interface UserDAO extends JpaRepository<User,Integer> {
 
 }

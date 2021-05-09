@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.dao.PersonaDAO;
-import com.demo.model.Persona;
+import com.demo.dao.UserDAO;
+import com.demo.model.User;
 
 /*
  * Clase para generar las ligas de comunicacion rest
@@ -24,10 +24,10 @@ import com.demo.model.Persona;
 
 @RestController
 @RequestMapping("personas")
-public class PersonaRest {
+public class UserRest {
 	
 	@Autowired
-	private PersonaDAO personaDAO; // Inyeccion de dependencias
+	private UserDAO personaDAO; // Inyeccion de dependencias
 	
 	//METODOS HTTP - SOLICITUD AL SERVIDOR
 	
@@ -36,7 +36,7 @@ public class PersonaRest {
 	 * @param RequestBody contiene el JSON de la información de la clase Persona
 	 * */
 	@PostMapping("/guardar")
-	public void guardar(@RequestBody Persona persona) {
+	public void guardar(@RequestBody User persona) {
 		personaDAO.save(persona);
 	}
 	
@@ -46,7 +46,7 @@ public class PersonaRest {
 	 * */
 	
 	@GetMapping("/listar")
-	public List<Persona> listar(){
+	public List<User> listar(){
 		return personaDAO.findAll();
 	}
 	
@@ -64,7 +64,7 @@ public class PersonaRest {
 	 * @param Persona 
 	 * */
 	@PutMapping("/actualizar")
-	public void actualizar(@RequestBody Persona persona) {
+	public void actualizar(@RequestBody User persona) {
 		personaDAO.save(persona);
 	}
 }
