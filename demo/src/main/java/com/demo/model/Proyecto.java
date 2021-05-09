@@ -26,7 +26,7 @@ public class Proyecto {
 	@Column
 	private Integer projectManager;
 	@Column 
-	private ArrayList<Integer> desarrollador;
+	private String desarrollador;
 	
 	//getters and setters
 	public Integer getIdProyecto() {
@@ -53,10 +53,10 @@ public class Proyecto {
 	public void setProjectManager(Integer projectManager) {
 		this.projectManager = projectManager;
 	}
-	public ArrayList<Integer> getDesarrollador() {
+	public String getDesarrollador() {
 		return desarrollador;
 	}
-	public void setDesarrollador(ArrayList<Integer> desarrollador) {
+	public void setDesarrollador(String desarrollador) {
 		this.desarrollador = desarrollador;
 	}
 	
