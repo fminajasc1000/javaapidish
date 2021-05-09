@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.dao.ProyectoDAO;
-import com.demo.model.Persona;
 import com.demo.model.Proyecto;
 /*
  * Clase para generar las ligas de comunicacion rest
