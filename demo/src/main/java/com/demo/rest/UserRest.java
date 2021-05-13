@@ -23,7 +23,7 @@ import com.demo.model.User;
  * */
 
 @RestController
-@RequestMapping("personas")
+@RequestMapping("user")
 public class UserRest {
 	
 	@Autowired
