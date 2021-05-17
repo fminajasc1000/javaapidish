@@ -1,8 +1,4 @@
-package com.demo.model;
-
-import java.io.Serializable;
-import java.util.List;
-import java.util.Set;
+package com.demo.modelo;
 
 import javax.persistence.*;
 
@@ -13,29 +9,23 @@ import javax.persistence.*;
  * 
  * */
 @Entity
-public class User implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 202817008551817518L;
-
+public class Usuario{
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private String id;
 	@Column
 	private String nombre;
 	@Column
-    private String projectManager;
+    private String project;
 	@Column
     private String descripcion;
 	@Column
     private String desarrollador1;
 	@Column
     private String desarrollador2;
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -44,11 +34,11 @@ public class User implements Serializable{
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getProjectManager() {
-		return projectManager;
+	public String getProject() {
+		return project;
 	}
-	public void setProjectManager(String projectManager) {
-		this.projectManager = projectManager;
+	public void setProject(String project) {
+		this.project = project;
 	}
 	public String getDescripcion() {
 		return descripcion;
@@ -68,13 +58,22 @@ public class User implements Serializable{
 	public void setDesarrollador2(String desarrollador2) {
 		this.desarrollador2 = desarrollador2;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", nombre=" + nombre + ", projectManager=" + projectManager + ", descripcion="
+		return "User [id=" + id + ", nombre=" + nombre + ", project=" + project + ", descripcion="
 				+ descripcion + ", desarrollador1=" + desarrollador1 + ", desarrollador2=" + desarrollador2 + "]";
+	}
+	public Usuario(String id, String nombre, String project, String descripcion, String desarrollador1,
+			String desarrollador2) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.project = project;
+		this.descripcion = descripcion;
+		this.desarrollador1 = desarrollador1;
+		this.desarrollador2 = desarrollador2;
+	}
+	public Usuario() {
 	}
 	
 	//getters and setters
